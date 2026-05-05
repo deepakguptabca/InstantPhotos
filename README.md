@@ -71,20 +71,9 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 4. Set up environment variables
-
-Create a `.env` file in the project root:
-
-```env
-REMOVE_BG_API_KEY=your_remove_bg_api_key_here
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-CLOUDINARY_API_KEY=your_cloudinary_api_key
-CLOUDINARY_API_SECRET=your_cloudinary_api_secret
-```
-
 > ⚠️ Never commit your `.env` file. Add it to `.gitignore`.
 
-### 5. Run the app
+### 4. Run the app
 
 ```bash
 python app.py
