@@ -50,6 +50,8 @@ pip install -r requirements.txt
 
 >  Never commit your `.env` file. Add it to `.gitignore`.
 
+Set the `REMOVE_BG_API_URL` environment variable to use another API that accepts the same requests as remove.bg (default: `https://api.remove.bg/v1.0/removebg`). remove.bg ends its self-serve API on 1 December 2026.
+
 ### 4. Run the app
 
 ```bash
