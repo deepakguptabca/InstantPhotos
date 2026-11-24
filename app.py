@@ -4,6 +4,9 @@ from io import BytesIO
 import requests
 import os
 
+# Any API that accepts remove.bg's requests works here; remove.bg ends its self-serve API on 1 December 2026.
+REMOVE_BG_API_URL = os.getenv("REMOVE_BG_API_URL") or "https://api.remove.bg/v1.0/removebg"
+
 app = Flask(__name__)
 
 
@@ -20,7 +23,7 @@ def process_single_image(input_image_bytes):
     REMOVE_BG_API_KEY = session.get('api_key')
     # Step 1: Background removal
     response = requests.post(
-        "https://api.remove.bg/v1.0/removebg",
+        REMOVE_BG_API_URL,
         files={"image_file": input_image_bytes},
         data={"size": "auto"},
         headers={"X-Api-Key": REMOVE_BG_API_KEY},
